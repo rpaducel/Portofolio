@@ -1,0 +1,89 @@
+.containerContact {
+  color:white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 4.5vw 10%;
+  gap: 10px;
+  
+
+}
+.text {
+  display: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.text h2 {
+  font-size: 4vw;
+  font-weight: 700;
+  letter-spacing: 0.2vw;
+  margin-left: 2.5vw;
+}
+
+.text p {
+  font-size: 2vw;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 1vw;
+  
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.link:hover {
+  color: #6188aa;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.5vw;
+  font-weight: 400;
+  letter-spacing: 0.1vw;
+}
+
+@media screen and (max-width: 900px) {
+  .containerContact {
+    flex-direction: column;
+    gap: 23px;
+    width: 100%;
+    padding: 5vw 10%;
+    margin: 0;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+  }
+
+  .links {
+    align-items: center;
+    width: 80vw;
+  }
+  .link a {
+    font-size: 2.5vw;
+  }
+  .text p {
+    font-size: 3vw;
+  }
+  .text h2 {
+    font-size: 7vw;
+    margin: 0;
+  }
+}

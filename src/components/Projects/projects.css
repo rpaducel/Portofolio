@@ -1,0 +1,109 @@
+.projects {
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  padding: 5rem 1rem;
+  background: rgb(12, 25, 36);
+}
+
+.projectsTitle {
+  margin: 1rem 0;
+  font-size: 4rem;
+}
+
+.projectsImgs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  flex-wrap: wrap;
+  gap:100px;
+}
+
+.projectsImg {
+  object-fit: cover;
+  height: 30vh;
+  width: 25vw;
+  vertical-align: middle;
+  border-radius: 2rem;
+  position: relative;
+  transition: transform 0.3s ease; /* Add a transition for smoother hover effect */
+}
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+
+.imgContainer:hover .overlayLeft,
+.imgContainer:hover .overlayRight {
+  opacity: 1;
+}
+
+.overlayLeft,
+.overlayRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+.overlayLeft:hover, .overlayRight:hover {
+  background-color:rgba(95, 95, 95, 0.6);
+}
+
+.overlayLeft {
+  left:0%;
+  
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.overlayRight {
+  right: 0%;
+  
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.overlayLeft h2, .overlayRight h2 {
+  color: white;
+  padding-left: 20px
+}
+
+.icon {
+  height: 50px; /* Adjust size as needed */
+  width: 50px; /* Adjust size as needed */
+}
+
+@media (max-width: 1600px) {
+  .projectsImg {
+    width: 35vw;
+    height: 40vh; /* Adjust width to fit two images per row */
+  }
+
+  .projectsImgs {
+   
+    gap: 5rem; /* Adjust gap between images */
+  }
+}
+@media (max-width: 1200px) {
+  .projectsImg {
+    width: 70vw;
+    height: 45vh;
+  }
+  .projectsImgs {
+    gap: 2rem;
+  }
+}
+
