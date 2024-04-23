@@ -14,6 +14,7 @@
 .projectsTitle {
   margin: 1rem 0;
   font-size: 4rem;
+  padding-bottom: 5rem;
 }
 
 .projectsImgs {
@@ -32,7 +33,7 @@
   vertical-align: middle;
   border-radius: 2rem;
   position: relative;
-  transition: transform 0.3s ease; /* Add a transition for smoother hover effect */
+  transition: transform 0.3s ease; 
 }
 .imgContainer {
   position: relative;
@@ -56,8 +57,9 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0; /* Hidden by default */
+  opacity: 0; 
   transition: opacity 0.3s ease;
+  
 }
 .overlayLeft:hover, .overlayRight:hover {
   background-color:rgba(95, 95, 95, 0.6);
@@ -78,26 +80,32 @@
 }
 .overlayLeft h2, .overlayRight h2 {
   color: white;
-  padding-left: 20px
+  padding-left: 20px;  
 }
 
 .icon {
-  height: 50px; /* Adjust size as needed */
-  width: 50px; /* Adjust size as needed */
+  height: 50px; 
+  width: 50px; 
+  
 }
 
 @media (max-width: 1600px) {
   .projectsImg {
     width: 35vw;
-    height: 40vh; /* Adjust width to fit two images per row */
+    height: 40vh; 
   }
 
   .projectsImgs {
    
-    gap: 5rem; /* Adjust gap between images */
+    gap: 5rem; 
   }
 }
-@media (max-width: 1200px) {
+@media (max-width:1200px) {
+  .projectsImg {
+    width: 40vw;
+  }
+}
+@media (max-width: 900px) {
   .projectsImg {
     width: 70vw;
     height: 45vh;
@@ -106,4 +114,26 @@
     gap: 2rem;
   }
 }
-
+@media (max-width: 600px) {
+  .projectsImg {
+    width: 70vw;
+    height: 35vh;
+  }
+}
+@media (max-width: 500px) {
+  .projectsImg {
+    width: 70vw;
+    height: 30vh;
+  }
+  .overlayLeft h2, .overlayRight h2 {
+  font-size:medium;
+  padding-left: 5px;
+  }
+  .icon {
+    height: 30px;
+    width: 30px; 
+  }
+  .projectsTitle {
+    font-size: 10vw;
+  }
+}
